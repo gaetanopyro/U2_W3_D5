@@ -1,5 +1,5 @@
 const URL = "https://striveschool-api.herokuapp.com/api/product";
-const form = document.getElementById("form-item");
+const form = document.getElementById("form_enter");
 console.log(form);
 
 form.onsubmit = function (e) {
@@ -32,10 +32,6 @@ form.onsubmit = function (e) {
 };
 
 /*
-const deleteBtn = document.getElementById("btn-delete");
-
-const nameForm =document.
-
 const itemPhone = () => {
   fetch(URL, {
     headers: {
@@ -50,11 +46,7 @@ const itemPhone = () => {
       return response.json();
     })
     .then((information) => {
-      document.getElementById("name").value = information.name;
-      document.getElementById("description").value = information.description;
-      document.getElementById("brand").value = information.brand;
-      document.getElementById("imageUrl").value = information.imageUrl;
-      document.getElementById("price").value = information.price;
+
     })
     .catch((error) => console.log(error));
 };
