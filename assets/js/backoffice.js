@@ -1,5 +1,6 @@
 const URL = "https://striveschool-api.herokuapp.com/api/product";
 const form = document.getElementById("form-item");
+console.log(form);
 
 form.onsubmit = function (e) {
   e.preventDefault();
@@ -8,7 +9,7 @@ form.onsubmit = function (e) {
   const descriptionInp = document.getElementById("description");
   const brandInp = document.getElementById("brand");
   const imageUrlInp = document.getElementById("imageUrl");
-  const priceInp = document.getElementById("imageUrl");
+  const priceInp = document.getElementById("price");
 
   const newInformation = {
     name: nameInp.value,
@@ -29,6 +30,7 @@ form.onsubmit = function (e) {
   });
   console.log("SUBMIT", newInformation);
 };
+
 /*
 const deleteBtn = document.getElementById("btn-delete");
 
