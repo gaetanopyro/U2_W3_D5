@@ -1,6 +1,8 @@
 const URL = "https://striveschool-api.herokuapp.com/api/product";
 const form = document.getElementById("form_enter");
 const deleteBtn = document.getElementById("delete-btn");
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
 
 form.onsubmit = function (e) {
   e.preventDefault();
