@@ -19,7 +19,7 @@ const newCard = () => {
       row.innerText = "";
       item.forEach((newItem) => {
         const ItemUrl = "./details.html?" + "id" + newItem._id;
-        console.log(newItem);
+        console.log(ItemUrl);
 
         const col = document.createElement("div");
         col.className = "col-12 col-sm-6 col-md-4 col-lg-3 mb-4";
@@ -59,7 +59,7 @@ const newCard = () => {
 
         const btnFirst = document.createElement("a");
         btnFirst.type = "button";
-        btnFirst.href = "./details.html";
+        btnFirst.href = ItemUrl;
         btnFirst.className = "btn btn-sm btn-success";
         btnFirst.innerText = "Details";
 
