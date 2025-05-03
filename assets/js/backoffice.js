@@ -35,12 +35,23 @@ form.onsubmit = function (e) {
 };
 
 deleteBtn.onclick = function () {
-  fetch(URL, { method: "DELETE" })
-    .then((resp) => {
-      if (resp.ok) {
-        alert("Item eliminato");
-        window.location.assign("./index.html");
-      }
+  if (confirm("Sei sicuro di voler eliminare questo prodotto?")) {
+    fetch(URL, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODE0OGI5MzFjMjUwNDAwMTUxYWI2OTIiLCJpYXQiOjE3NDYxNzY5MTUsImV4cCI6MTc0NzM4NjUxNX0.muFLEb0JxkjnCUW9S0O3BcEh5hekLALr1glNBR0sIn0",
+      },
     })
-    .catch((error) => console.log(error));
+      .then((resp) => {
+        if (resp.ok) {
+          alert("Hai correttamente eliminato il prodotto");
+          window.location.assign("./index.html");
+        } else {
+          throw new Error("Errore nella cancellazione del prodotto");
+        }
+      })
+      .catch((error) => console.log(error));
+  }
 };
