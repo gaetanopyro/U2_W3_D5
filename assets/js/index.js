@@ -18,11 +18,11 @@ const newCard = () => {
     .then((item) => {
       row.innerText = "";
       item.forEach((newItem) => {
+        const ItemUrl = "./details.html?" + "id" + newItem._id;
         console.log(newItem);
-        console.log(newItem._id);
 
         const col = document.createElement("div");
-        col.className = "col-12 col-md-6 col-lg-4 mb-4";
+        col.className = "col-12 col-sm-6 col-md-4 col-lg-3 mb-4";
 
         const colCard = document.createElement("div");
         colCard.className = "card-4 shadow p-1 mb-5 bg-body-tertiary rounded";

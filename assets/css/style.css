@@ -7,3 +7,15 @@
 body {
   margin: 0;
 }
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 1.5/1;
+  object-fit: cover;
+  object-position: center;
+}
+.card {
+  height: 100%;
+}
+#homep {
+  background-image: url("../img/free-vector-gradient-blur-green-yellow-blue-abstract-background_696747-116.avif");
+}
